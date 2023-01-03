@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Adventures Today!</title>
+  </head>
+  <body>
+    <div class="box" id="heading">
+      <h1>It's <br><%= day %> !!<br>Here's your list of activities.</h1>
+    </div>
+
+    <div class="box">
+      <% for(let i=0;i< tasks.length;i++) { %>
+      <div class="item">
+          <input type="checkbox">
+          <p><%= tasks[i] %></p>
+      </div>
+      <% } %>
+      
+      <form class="item" action="/" method="post">
+        <input type="text" name="todo" placeholder="Enter here" autocomplete="off"/>
+        <button type="submit">+</button>
+      </form>
+    </div>
+    
+  </body>
+</html>
